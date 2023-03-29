@@ -20,7 +20,7 @@ from class123 import *
 import tempfile, os
 import datetime
 import time
-import datetime
+
 #======python的函數庫==========
 
 app = Flask(__name__)
