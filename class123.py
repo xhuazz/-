@@ -53,4 +53,4 @@ def class123():
     if next_class:
         return '下一節課是：%s'%next_class
     else:
-        return '今天已經沒有課了。'
+        return '今天已經沒有課了...'
