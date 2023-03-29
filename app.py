@@ -67,7 +67,7 @@ def handle_message(event):
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
     elif '功能列表' in msg:
-        message = function_list()
+        message = class123()
         line_bot_api.reply_message(event.reply_token, message)
     elif '下一節什麼課' in msg:
         message = class123()
