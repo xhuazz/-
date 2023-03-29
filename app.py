@@ -69,7 +69,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '下一節什麼課' in msg:
         import datetime
-
+        
         # 建立課表資料庫，格式為 {星期幾: [課程1, 課程2, ...]}
         timetable = {
             0: ['公民', '英語', '數位科技進階','彈性學習時間','中國小說選讀','數學應用','商業溝通'],
@@ -120,9 +120,9 @@ def handle_message(event):
                     break
 
         if next_class:
-            print('下一節課是：', next_class)
+            message = next_class
         else:
-            print('今天已經沒有課了。')
+            message = '今天已經沒有課了'
     else:
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
