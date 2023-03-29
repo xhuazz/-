@@ -19,6 +19,7 @@ from Function import *
 import tempfile, os
 import datetime
 import time
+import datetime
 #======python的函數庫==========
 
 app = Flask(__name__)
@@ -68,8 +69,6 @@ def handle_message(event):
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
     elif '下一節什麼課' in msg:
-        import datetime
-        
         # 建立課表資料庫，格式為 {星期幾: [課程1, 課程2, ...]}
         timetable = {
             0: ['公民', '英語', '數位科技進階','彈性學習時間','中國小說選讀','數學應用','商業溝通'],
