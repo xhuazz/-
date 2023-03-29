@@ -53,7 +53,7 @@ def handle_message(event):
         message = imagemap_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '最新活動訊息' in msg:
-        message = '123'
+        message = buttons_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '註冊會員' in msg:
         message = Confirm_Template()
@@ -76,9 +76,8 @@ def handle_message(event):
             1: ['運算思維', '運算思維', '體育','會計實務','取為英文閱讀','經濟學進階','生涯規劃'],
             2: ['數位科技進階', '數位科技進階','商業經營管理', '趣味英文選讀','團體活動時間','團體活動時間','數學應用'],
             3: ['會計實務', '英語文', '體育','商業經營管理','經濟學進階','國語文','彈性學習時間'],
-            4: ['資料庫應用', '資料庫應用', '會計實務','經濟學進階','國語文','數學應用','數位科技進階']
+            4: ['資料庫應用', '資料庫應用', '會計實務','經濟學進階','國語文','數學應用','數位科技進階']}
             # 其他星期幾的課表資料
-        }
 
         # 定義函式 get_class_time，用來取得指定課程的上課時間
         def get_class_time(index, timetable):
