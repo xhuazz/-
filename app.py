@@ -55,7 +55,6 @@ def handle_message(event):
         message = imagemap_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '最新活動訊息' in msg:
-        message = buttons_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '註冊會員' in msg:
         message = Confirm_Template()
@@ -67,14 +66,15 @@ def handle_message(event):
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
     elif '功能列表' in msg:
+        message = buttons_message()
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
     elif '下一節什麼課' in msg:
         message = TextSendMessage(class123())
         line_bot_api.reply_message(event.reply_token, message)
-    else:
-        message = TextSendMessage(text=msg)
-        line_bot_api.reply_message(event.reply_token, message)
+    #else:
+    #    message = TextSendMessage(text=msg)
+    #    line_bot_api.reply_message(event.reply_token, message)
 
 
 @handler.add(PostbackEvent)
