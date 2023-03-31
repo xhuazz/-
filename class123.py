@@ -53,7 +53,7 @@ def class123():
                 next_class = today_timetable[i]
                 break
 
-    elif next_class:
+    if next_class:
         return '下一節課是：%s'%next_class
     else:
         return '今天已經沒有課了...'
