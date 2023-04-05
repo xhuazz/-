@@ -14,6 +14,7 @@ from message import *
 from new import *
 from Function import *
 from class123 import *
+from today_timetable *
 #======這裡是呼叫的檔案內容=====
 
 #======python的函數庫==========
