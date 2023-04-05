@@ -72,6 +72,8 @@ def handle_message(event):
     elif '下一節什麼課' in msg:
         message = TextSendMessage(class123())
         line_bot_api.reply_message(event.reply_token, message)
+    #elif '' = TextSendMessage()
+    #    line_bot_api.reply_message(event.reply_token, message)
     #else:
     #    message = TextSendMessage(text=msg)
     #    line_bot_api.reply_message(event.reply_token, message)
