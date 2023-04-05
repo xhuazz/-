@@ -15,6 +15,7 @@ from new import *
 from Function import *
 from class123 import *
 from today_timetable import *
+from fun import *
 #======這裡是呼叫的檔案內容=====
 
 #======python的函數庫==========
@@ -70,11 +71,14 @@ def handle_message(event):
         message = buttons_message()
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '下一節什麼課' in msg:
+    elif '下一節什麼課' in msg or '下一節課' in msg:
         message = TextSendMessage(class123())
         line_bot_api.reply_message(event.reply_token, message)
     elif '今天課表' in msg:
         message = TextSendMessage(today_timetable())
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '功能' in msg or '你有什麼功能' in msg or '你有什麼用' in msg :
+        message = TextSendMessage(fun())
         line_bot_api.reply_message(event.reply_token, message)
     #elif '' = TextSendMessage()
     #    line_bot_api.reply_message(event.reply_token, message)
