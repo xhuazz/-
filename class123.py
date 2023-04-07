@@ -27,14 +27,16 @@ def class123():
 
     # 取得現在時間
     now = datetime.datetime.now()
-
-    # 取得今天星期幾，0 為星期一，6 為星期日
-    weekday = now.weekday()
+    
     # 調整時間增加8小時1.5分鐘
     adtime=datetime.timedelta(hours=8,minutes=1.5)
     now=now+adtime
 
-    # 取得現在時間，格式為 'HH:MM'
+    # 取得今天星期幾，0 為星期一，6 為星期日
+    weekday = now.weekday()
+    
+
+    # 將現在時間格式改為 'HH:MM'
     current_time = now.strftime('%H:%M')
 
     next_class = None

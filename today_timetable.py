@@ -9,17 +9,19 @@ def today_timetable():
         3: ['會計實務', '英語文', '體育','商業經營管理','經濟學進階','國語文','彈性學習時間'],
         4: ['資料庫應用', '資料庫應用', '會計實務','經濟學進階','國語文','數學應用','數位科技進階']}
         # 其他星期幾的課表資料
+    
     # 取得現在時間
     now = datetime.datetime.now()
+
+    # 調整時間增加8小時1.5分鐘
+    adtime=datetime.timedelta(hours=8,minutes=1.5)
+    now=now-adtime
 
     # 取得今天星期幾，0 為星期一，6 為星期日
     weekday = now.weekday()
 
-    # 取得現在時間，格式為 'HH:MM'
-    adtime=datetime.timedelta(hours=8,minutes=1.5)
-    now=now-adtime
+    # 將現在時間格式改為 'HH:MM'
     current_time = now.strftime('%H:%M')
-   # current_time=current_time-adtime
 
     next_class = None
     # 查詢接下來的課程
