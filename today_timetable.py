@@ -15,7 +15,7 @@ def today_timetable():
 
     # 調整時間增加8小時1.5分鐘
     adtime=datetime.timedelta(hours=8,minutes=1.5)
-    now=now-adtime
+    now=now+adtime
 
     # 取得今天星期幾，0 為星期一，6 為星期日
     weekday = now.weekday()
@@ -23,7 +23,6 @@ def today_timetable():
     # 將現在時間格式改為 'HH:MM'
     current_time = now.strftime('%H:%M')
 
-    next_class = None
     # 查詢接下來的課程
     if weekday in timetable:
         # 取得今天的課表
